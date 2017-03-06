@@ -98,9 +98,10 @@ cdvPluginPostBuildExtras.add({
         xwalkMavenRepo = 'https://download.01.org/crosswalk/releases/crosswalk-lite/android/maven2';
     }
     repositories {
-      maven {
-        url xwalkMavenRepo
-      }
+        mavenLocal()                 
+//      maven {
+//        url xwalkMavenRepo
+//      }
     }
 
     android {
