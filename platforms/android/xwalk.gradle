@@ -41,7 +41,7 @@ def getConfigPreference(name) {
             if (it.attribute('default') != null) {
                 defaultValue = it.attribute('default');
                 println 'defaultValue = ' + defaultValue
-            } else {
+            } else if (it.attribute("value") != null) {
                 ret = it.attribute("value")
                 println 'ret = ' + ret
                 return ret
