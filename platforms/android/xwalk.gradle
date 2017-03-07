@@ -39,12 +39,17 @@ def getConfigPreference(name) {
         if (attrName && attrName.toLowerCase() == name) {
             if (it.attribute('default') != null) {
                 defaultValue = it.attribute('default');
+                println 'defaultValue=' + defaultValue
             } 
             if (it.attribute('value') != null) {
-                ret = it.attribute("value")
+                value = it.attribute("value")
+                println 'value=' + value
             }
         }
     }
+    println '---'
+    println 'defaultValue=' + defaultValue
+    println 'value=' + value
     return ret ? ret : defaultValue
 }
 
@@ -102,9 +107,9 @@ cdvPluginPostBuildExtras.add({
     }
     repositories {
         mavenLocal()                 
-        maven {
-            url xwalkMavenRepo
-        }
+        //maven {
+        //    url xwalkMavenRepo
+        //}
     }
 
     android {
