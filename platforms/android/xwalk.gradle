@@ -146,7 +146,7 @@ cdvPluginPostBuildExtras.add({
     if (xwalk64bit != null) {
         xwalkSpec = xwalkSpec + BIT_64
     }
-    println xwalkSpec
+    println 'Dependency: ' + xwalkSpec
 
     dependencies {
         compile xwalkSpec
