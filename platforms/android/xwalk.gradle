@@ -80,7 +80,9 @@ if (ext.xwalkMode == SHARED_MODE) {
 
 // Set defaults before project's build-extras.gradle
 if (!project.hasProperty('xwalkVersion')) {
+    println 'Getting xwalkVersion from config preferences'
     ext.xwalkVersion = getConfigPreference("xwalkVersion")
+    println 'ext.xwalkVersion = ' + ext.xwalkVersion
 }
 
 // Set defaults before project's build-extras.gradle
