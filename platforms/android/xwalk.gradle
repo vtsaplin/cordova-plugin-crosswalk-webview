@@ -102,9 +102,9 @@ cdvPluginPostBuildExtras.add({
     }
     repositories {
         mavenLocal()                 
-//      maven {
-//        url xwalkMavenRepo
-//      }
+        maven {
+            url xwalkMavenRepo
+        }
     }
 
     android {
