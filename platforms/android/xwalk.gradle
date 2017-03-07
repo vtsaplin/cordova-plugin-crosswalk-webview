@@ -35,18 +35,19 @@ def getConfigPreference(name) {
 
     def ret, defaultValue
     root.preference.each { it ->
-        def attrName = it.attribute("name")
-        if (attrName && attrName.toLowerCase() == name) {
-            println 'prop = ' + attrName
-            if (it.attribute('default') != null) {
-                defaultValue = it.attribute('default');
-                println 'defaultValue = ' + defaultValue
-            } else if (it.attribute("value") != null) {
-                ret = it.attribute("value")
-                println 'ret = ' + ret
-                return
-            }
-        }
+        if (!ret) {
+               def attrName = it.attribute("name")
+               if (attrName && attrName.toLowerCase() == name) {
+                   println 'prop = ' + attrName
+                   if (it.attribute('default') != null) {
+                       defaultValue = it.attribute('default');
+                       println 'defaultValue = ' + defaultValue
+                   } else if (it.attribute("value") != null) {
+                       ret = it.attribute("value")
+                       println 'ret = ' + ret
+                   }
+               }
+       }
     }
     return ret ? ret : defaultValue
 }
