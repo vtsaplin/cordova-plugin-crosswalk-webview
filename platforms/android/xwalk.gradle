@@ -39,17 +39,11 @@ def getConfigPreference(name) {
         if (attrName && attrName.toLowerCase() == name) {
             if (it.attribute('default') != null) {
                 defaultValue = it.attribute('default');
-                println 'defaultValue=' + defaultValue
             } else {
-//            if (it.attribute('value') != null) {
-                value = it.attribute("value")
-                println 'value=' + value
+                ret = it.attribute("value")
             }
         }
     }
-//    println '---'
-//    println 'defaultValue=' + defaultValue
-//    println 'value=' + value
     return ret ? ret : defaultValue
 }
 
