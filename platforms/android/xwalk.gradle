@@ -37,10 +37,13 @@ def getConfigPreference(name) {
     root.preference.each { it ->
         def attrName = it.attribute("name")
         if (attrName && attrName.toLowerCase() == name) {
+            println 'prop = ' + attrName
             if (it.attribute('default') != null) {
                 defaultValue = it.attribute('default');
+                println 'defaultValue = ' + defaultValue
             } else {
                 ret = it.attribute("value")
+                println 'ret = ' + ret
             }
         }
     }
