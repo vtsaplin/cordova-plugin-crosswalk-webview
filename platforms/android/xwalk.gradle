@@ -124,6 +124,9 @@ cdvPluginPostBuildExtras.add({
     }
 
     def xwalkSpec = xwalkVersion
+    println 'xwalkVersion: ' + xwalkVersion
+    println 'xwalkSpec before: ' + xwalkSpec
+    
     if (ext.xwalkMode == LITE_MODE) {
         xwalkSpec = xwalkLiteVersion;
     }
@@ -146,7 +149,7 @@ cdvPluginPostBuildExtras.add({
     if (xwalk64bit != null) {
         xwalkSpec = xwalkSpec + BIT_64
     }
-    println 'Dependency: ' + xwalkSpec
+    println 'xwalkSpec after: ' + xwalkSpec
 
     dependencies {
         compile xwalkSpec
