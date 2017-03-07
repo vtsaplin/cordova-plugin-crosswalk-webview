@@ -44,11 +44,11 @@ def getConfigPreference(name) {
             } else {
                 ret = it.attribute("value")
                 println 'ret = ' + ret
-                break
+                return ret
             }
         }
     }
-    return ret ? ret : defaultValue
+    return defaultValue
 }
 
 if (!project.hasProperty('xwalk64bit')) {
