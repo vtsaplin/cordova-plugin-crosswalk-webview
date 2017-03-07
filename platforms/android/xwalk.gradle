@@ -47,9 +47,9 @@ def getConfigPreference(name) {
             }
         }
     }
-    println '---'
-    println 'defaultValue=' + defaultValue
-    println 'value=' + value
+//    println '---'
+//    println 'defaultValue=' + defaultValue
+//    println 'value=' + value
     return ret ? ret : defaultValue
 }
 
