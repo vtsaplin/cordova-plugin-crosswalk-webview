@@ -48,6 +48,7 @@ def getConfigPreference(name) {
             }
         }
     }
+    println 'return defaultValue = ' + defaultValue
     return defaultValue
 }
 
